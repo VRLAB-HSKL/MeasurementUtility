@@ -1,4 +1,4 @@
-name: Create gh-pages
+name: create gh-pages
 
 on:
   workflow_run:
