@@ -1,0 +1,20 @@
+name: create gh-pages
+
+on:
+  workflow_run:
+    workflows: ["build and test"]
+    branches: [ main ]
+    types:
+      - completed
+      
+jobs: 
+  create-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - uses: actions/checkout@v3
+      
+      - uses: langroodi/doxygenize@[version/tag/commit hash (e.g., v1)]
+        with: 
+          doxygenconf: .MeasurementUtility/MeasurementUtility/Doxyfile
+          darkmode: true
