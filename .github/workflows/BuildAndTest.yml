@@ -36,7 +36,7 @@ jobs:
            
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: MeasurementUtility/MeasurementUtility.sln
+      working-directory: MeasurementUtility/
     
     - name: Test
       run: dotnet test --no-restore --verbosity normal
