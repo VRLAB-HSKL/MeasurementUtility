@@ -1,0 +1,15 @@
+name: Create gh-pages
+
+on:
+  workflow_run:
+    workflows: ["build and test"]
+    branches: [ main ]
+    types:
+      - completed
+      
+jobs: 
+  echo-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World!"
