@@ -16,5 +16,4 @@ jobs:
       
       - uses: langroodi/doxygenize@v1
         with: 
-          doxygenconf: MeasurementUtility/MeasurementUtility/Doxyfile
           darkmode: true
