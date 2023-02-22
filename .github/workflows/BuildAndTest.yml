@@ -26,11 +26,11 @@ jobs:
 
     - name: Install dependencies
       run: dotnet restore
-      working-directory: MeasurementUtility/MeasurementUtility/
+      working-directory: MeasurementUtility/
       
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: MeasurementUtility/MeasurementUtility/
+      working-directory: MeasurementUtility/
     
     - name: Test
       run: dotnet test --no-restore --verbosity normal
