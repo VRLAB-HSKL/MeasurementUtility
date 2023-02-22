@@ -28,9 +28,15 @@ jobs:
       run: dotnet restore
       working-directory: MeasurementUtility/
       
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.1.1
+      
+    - name: Restore NuGet packages
+      run: nuget restore MeasurementUtility/
+           
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: MeasurementUtility/
+      working-directory: MeasurementUtility/MeasurementUtility.sln
     
     - name: Test
       run: dotnet test --no-restore --verbosity normal
