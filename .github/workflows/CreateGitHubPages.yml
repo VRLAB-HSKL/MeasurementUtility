@@ -1,6 +1,7 @@
 name: create gh-pages
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: ["build and test"]
     branches: [ main ]
