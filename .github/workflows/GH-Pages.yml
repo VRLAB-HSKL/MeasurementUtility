@@ -11,5 +11,16 @@ jobs:
   echo-hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello World
-        run: echo "Hello World!"
+        
+      - name: Create html pages
+        uses: mattnotmitt/doxygen-action@v1.3.1  
+        with:
+          working-directory: MeasurementUtility/MeasurementUtility/
+      
+      - uses: peaceiris/actions-gh-pages@v3
+        name: Deploy HTML pages
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html
+          publish_branch: gh-pages
