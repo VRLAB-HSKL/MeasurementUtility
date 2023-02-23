@@ -10,9 +10,12 @@ on:
       
 jobs: 
   create-gh-pages:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     
       - uses: actions/checkout@v3
       
-      - uses: langroodi/doxygenize@v1
+      - name: Doxygen
+        uses: mattnotmitt/doxygen-action@1.9.5
+        with:
+          working-directory: MeasurementUtility/MeasurementUtility/
