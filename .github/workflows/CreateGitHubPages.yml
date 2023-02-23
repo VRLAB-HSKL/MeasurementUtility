@@ -10,7 +10,7 @@ on:
       
 jobs: 
   create-gh-pages:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     
       - uses: actions/checkout@v3
@@ -19,3 +19,12 @@ jobs:
         uses: mattnotmitt/doxygen-action@1.9.5
         with:
           working-directory: MeasurementUtility/MeasurementUtility/
+          
+      - name: Deploy HTML pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == "refs/heads/main" }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html
+          publish_branch: gh-pages
+
