@@ -4,13 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Toolkit.Coordinate c1 = new Toolkit.Coordinate(1f, 0f, 1f);
-            Toolkit.Coordinate c2 = new Toolkit.Coordinate(1d, 1d, 1d);
+            Coordinate c1 = new Coordinate(1f, 0f, 1f);
+            Coordinate c2 = new Coordinate(1d, 1d, 1d);
 
-            Console.WriteLine( Global.Formulary.Distance(c1, c2) );
+            Distance d = new Distance("möp:",c1, c2);
 
-
-
+            Console.WriteLine(d.ToString());
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="Logging\LogAssistant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toolkit\Coordinate.cs" />
+    <Compile Include="Toolkit\Measurements\Distance.cs" />
+    <Compile Include="Toolkit\Measurements\IMeasureable.cs" />
+    <Compile Include="Toolkit\Measurements\MeasurementBase.cs" />
+    <Compile Include="Toolkit\Points\IPoint.cs" />
+    <Compile Include="Toolkit\ResultContainer.cs" />
+    <Compile Include="Toolkit\Tools\ITool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Doxyfile" />

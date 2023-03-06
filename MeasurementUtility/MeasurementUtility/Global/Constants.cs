@@ -1,4 +1,4 @@
-﻿namespace MeasurementUtility.Global
+﻿namespace MeasurementUtility
 {
     public static class Constants
     {

@@ -2,7 +2,7 @@
 using System;
 using MeasurementUtility.Logging;
 
-namespace MeasurementUtility.Toolkit
+namespace MeasurementUtility
 {
     /// <summary>
     /// Coordinate documentation test.
@@ -53,7 +53,7 @@ namespace MeasurementUtility.Toolkit
             return base.GetHashCode();
         }
 
-        public static bool EqualValue(Coordinate c1, Coordinate c2, double epsilon = Global.Constants.Epsilon)
+        public static bool EqualValue(Coordinate c1, Coordinate c2, double epsilon = Constants.Epsilon)
         {
             return (Math.Abs(c1.x - c2.x) <= epsilon
                 && Math.Abs(c1.y - c2.y) <= epsilon
