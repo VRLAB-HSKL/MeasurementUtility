@@ -1,7 +1,8 @@
 ﻿namespace MeasurementUtility
 {
-    //TODO: Factory Pattern for Measurements
-    internal interface ITool
+    internal interface ITool<IMeasureable>
     {
+        IMeasureable Measure();
+        void UpdatePoints();
     }
 }

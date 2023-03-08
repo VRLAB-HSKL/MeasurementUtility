@@ -1,4 +1,6 @@
-﻿namespace MeasurementUtility.ConsoleApp
+﻿using MeasurementUtility.Toolkit.Tools;
+
+namespace MeasurementUtility.ConsoleApp
 {
     class Program
     {
@@ -7,9 +9,11 @@
             Coordinate c1 = new Coordinate(1f, 0f, 1f);
             Coordinate c2 = new Coordinate(1d, 1d, 1d);
 
-            Distance d = new Distance("möp:",c1, c2);
+            Distance d = new Distance("möp:",c2, c1);
 
-            Console.WriteLine(d.ToString());
+            TapeMeasure tapeMeasure = new TapeMeasure("TapeMeasure 1:", c2, c1);
+
+            Console.WriteLine(tapeMeasure.Measure());
         }
     }
 }

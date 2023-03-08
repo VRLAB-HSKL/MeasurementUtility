@@ -1,7 +1,9 @@
 ﻿namespace MeasurementUtility
 {
-    public abstract class MeasurementBase<T> : IMeasureable<T>
+    public abstract class ToolBase<IMeasureable> : ITool<IMeasureable>
     {
+        // Serializable?
+        // Auslagern?
         string id;
         public string ID
         {
@@ -22,12 +24,12 @@
             this.args = args;
         }
 
-        public T GetMeasurement()
+        public abstract IMeasureable Measure();
+
+        public void UpdatePoints()
         {
-            return CalculateMeasurement();
+            throw new System.NotImplementedException();
         }
-        
-        protected abstract T CalculateMeasurement();
 
         public abstract override string ToString();
     }
