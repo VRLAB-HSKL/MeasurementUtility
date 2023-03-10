@@ -65,6 +65,7 @@
     <Compile Include="Toolkit\Tools\ITool.cs" />
     <Compile Include="Toolkit\Tools\TapeMeasure.cs" />
     <Compile Include="Toolkit\Tools\ToolBase.cs" />
+    <Compile Include="Toolkit\Util\ClassSetupBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Doxyfile" />

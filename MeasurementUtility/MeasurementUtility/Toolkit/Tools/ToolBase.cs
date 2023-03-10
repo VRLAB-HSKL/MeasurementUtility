@@ -1,29 +1,7 @@
 ﻿namespace MeasurementUtility
 {
-    public abstract class ToolBase<IMeasureable> : ITool<IMeasureable>
+    public abstract class ToolBase<IMeasureable> : ClassSetupBase, ITool<IMeasureable>
     {
-        // Serializable?
-        // Auslagern?
-        string id;
-        public string ID
-        {
-            get
-            {
-                return id;
-            }
-
-            protected set
-            {
-                id = value;
-            }
-        }
-
-        protected Coordinate[] args;
-        protected void SetArguments(params Coordinate[] args)
-        {
-            this.args = args;
-        }
-
         public abstract IMeasureable Measure();
 
         public void UpdatePoints()
