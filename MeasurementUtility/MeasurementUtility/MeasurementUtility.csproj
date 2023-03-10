@@ -62,6 +62,8 @@
     <Compile Include="Toolkit\Measurements\IMeasureable.cs" />
     <Compile Include="Toolkit\Measurements\MeasurementBase.cs" />
     <Compile Include="Toolkit\Points\IPoint.cs" />
+    <Compile Include="Toolkit\Points\Point.cs" />
+    <Compile Include="Toolkit\Points\PointBase.cs" />
     <Compile Include="Toolkit\Tools\ITool.cs" />
     <Compile Include="Toolkit\Tools\TapeMeasure.cs" />
     <Compile Include="Toolkit\Tools\ToolBase.cs" />

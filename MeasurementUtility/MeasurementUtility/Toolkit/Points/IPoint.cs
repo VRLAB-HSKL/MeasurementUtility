@@ -2,7 +2,7 @@
 {
     internal interface IPoint
     {
-        void UpdateCoordinate();
+        void UpdateCoordinate(Coordinate coordinate);
         Coordinate GetCoordinate();
     }
 }
