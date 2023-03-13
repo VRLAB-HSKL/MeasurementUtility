@@ -1,6 +1,6 @@
 ﻿namespace MeasurementUtility
 {
-    public abstract class ToolBase<IMeasureable> : ClassSetupBase, ITool<IMeasureable>
+    public abstract class ToolBase<IMeasureable> : ClassSetupBase
     {
         public abstract IMeasureable Measure();
 

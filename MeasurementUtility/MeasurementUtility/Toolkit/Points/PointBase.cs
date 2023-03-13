@@ -1,6 +1,6 @@
 ﻿namespace MeasurementUtility
 {
-    public abstract class PointBase : ClassSetupBase, IPoint
+    public abstract class PointBase : ClassSetupBase
     {
         public Coordinate GetCoordinate()
         {

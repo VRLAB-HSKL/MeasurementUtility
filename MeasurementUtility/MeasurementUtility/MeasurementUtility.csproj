@@ -59,12 +59,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toolkit\Coordinate.cs" />
     <Compile Include="Toolkit\Measurements\Distance.cs" />
-    <Compile Include="Toolkit\Measurements\IMeasureable.cs" />
     <Compile Include="Toolkit\Measurements\MeasurementBase.cs" />
-    <Compile Include="Toolkit\Points\IPoint.cs" />
     <Compile Include="Toolkit\Points\Point.cs" />
     <Compile Include="Toolkit\Points\PointBase.cs" />
-    <Compile Include="Toolkit\Tools\ITool.cs" />
     <Compile Include="Toolkit\Tools\TapeMeasure.cs" />
     <Compile Include="Toolkit\Tools\ToolBase.cs" />
     <Compile Include="Toolkit\Util\ClassSetupBase.cs" />

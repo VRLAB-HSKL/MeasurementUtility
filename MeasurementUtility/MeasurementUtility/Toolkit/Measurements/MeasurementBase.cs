@@ -1,6 +1,6 @@
 ﻿namespace MeasurementUtility
 {
-    public abstract class MeasurementBase<T> : ClassSetupBase, IMeasureable<T>
+    public abstract class MeasurementBase<T> : ClassSetupBase
     {
         public T GetMeasurement()
         {

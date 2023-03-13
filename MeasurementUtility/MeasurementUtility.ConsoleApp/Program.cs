@@ -1,6 +1,4 @@
-﻿using MeasurementUtility.Toolkit.Tools;
-
-namespace MeasurementUtility.ConsoleApp
+﻿namespace MeasurementUtility.ConsoleApp
 {
     class Program
     {
