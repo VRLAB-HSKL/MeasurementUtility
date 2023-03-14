@@ -1,5 +1,8 @@
 ﻿namespace MeasurementUtility
 {
+    /// <summary>
+    /// intended for Unity.
+    /// </summary>
     public abstract class PointBase : ClassSetupBase
     {
         public Coordinate GetCoordinate()

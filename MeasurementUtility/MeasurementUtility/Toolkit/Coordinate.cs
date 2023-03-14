@@ -1,6 +1,5 @@
 ﻿using log4net;
 using System;
-using MeasurementUtility.Logging;
 
 namespace MeasurementUtility
 {
@@ -43,6 +42,8 @@ namespace MeasurementUtility
         // also compares data types.
         public override bool Equals(object obj)
         {
+            // string name = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            // log.Info(LogAssistant.INFO_METHODENTER + name);
             return obj is Coordinate coordinate &&
                    x == coordinate.x &&
                    y == coordinate.y &&

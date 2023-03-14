@@ -8,6 +8,7 @@
             Coordinate c2 = new Coordinate(1d, 1d, 1d);
 
             Distance d = new Distance("möp:",c2, c1);
+            Console.WriteLine(d.GetMeasurement());
 
             TapeMeasure tapeMeasure = new TapeMeasure("TapeMeasure 1:", c2, c1);
 

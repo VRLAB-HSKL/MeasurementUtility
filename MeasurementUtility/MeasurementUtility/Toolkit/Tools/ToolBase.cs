@@ -1,8 +1,13 @@
 ﻿namespace MeasurementUtility
 {
-    public abstract class ToolBase<IMeasureable> : ClassSetupBase
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="MeasurementBase">Datatype of the measurement. Primarily intended for types of MeasurementBase, but primitve data types
+    /// can also be used.</typeparam>
+    public abstract class ToolBase<MeasurementBase> : ClassSetupBase
     {
-        public abstract IMeasureable Measure();
+        public abstract MeasurementBase Measure();
 
         public void UpdatePoints()
         {
