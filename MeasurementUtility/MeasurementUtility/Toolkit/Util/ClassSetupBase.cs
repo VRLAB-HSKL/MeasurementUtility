@@ -31,8 +31,8 @@
         /// </summary>
         /// <param name="args">Any number of arguments of type Coordinate.</param>
         protected void SetArguments(params Coordinate[] args)
-        {
-            this.args = args;
+        {          
+            this.args = args;          
         }
     }
 }
