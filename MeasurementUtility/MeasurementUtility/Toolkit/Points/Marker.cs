@@ -7,17 +7,8 @@ namespace MeasurementUtility
     /// Intended to contain a Coordinate without the option to modify it.
     /// Used for visualization in Unity.
     /// </summary>
-    public class Marker : PointBase
+    public class Marker
     {
-        public Marker(String id, Coordinate coordinate)
-        {
-            ID = id;
-            SetCoordinates(coordinate);
-        }
-
-        public override string ToString()
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
