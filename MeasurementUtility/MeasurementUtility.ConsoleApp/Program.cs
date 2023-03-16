@@ -6,13 +6,13 @@
         {
             Coordinate c1 = new Coordinate(1f, 0f, 1f);
             Coordinate c2 = new Coordinate(1d, 1d, 1d);
+            Coordinate c3 = new Coordinate(2f, 2f, 2f);
 
-            Distance d = new Distance("möp:",c2, c1);
-            Console.WriteLine(d.CalculateMeasurement());
+            TapeMeasure t = new TapeMeasure("1");
+            t.UpdateCoordinates(c1, c3);
+            
 
-            TapeMeasure tapeMeasure = new TapeMeasure("TapeMeasure 1:", c2, c1);
-
-            Console.WriteLine(tapeMeasure.Measure());
+            Console.WriteLine(t.CreateMeasurement());
         }
     }
 }

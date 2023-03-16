@@ -7,8 +7,7 @@ namespace MeasurementUtility
     {
         public Point(String id, Coordinate coordinate) 
         {
-            ID = id;
-            SetArguments(coordinate);
+
         }
 
         /// <summary>
@@ -20,7 +19,6 @@ namespace MeasurementUtility
         /// </param>
         public void UpdateCoordinate(Coordinate coordinate)
         {
-            SetArguments(coordinate);
         }
 
         /// <inheritdoc/>

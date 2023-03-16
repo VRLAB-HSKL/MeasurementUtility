@@ -1,16 +1,19 @@
 ﻿namespace MeasurementUtility
 {
     /// <summary>
-    /// This class defines the base of every measurement, primarily their calculation.
+    /// This class defines the base of every measurement. It's adds a wrapper for the result
+    /// of the measurement to a class.
     /// </summary>
     /// <typeparam name="T">Datatype of the measurement</typeparam>
-    public abstract class MeasurementBase<T> : ClassSetupBase
+    public abstract class MeasurementBase<T> : CoordinateWrapper, IMeasurement
     {
-        /// <summary>
-        /// Protected method for every Measurement. Defines the calculation of the Measurement.
-        /// </summary>
-        /// <returns>Value of type T.</returns>
-        public abstract T CalculateMeasurement();
+        private T result;
+
+        public T Result 
+        {
+            get => result;
+            protected set => result = value; 
+        }
 
         /// <inheritdoc/>
         public abstract override string ToString();

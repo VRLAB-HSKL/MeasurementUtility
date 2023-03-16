@@ -5,24 +5,37 @@ namespace MeasurementUtility
     /// <summary>
     /// Class representing a tool, measuring distance.
     /// </summary>
-    public class TapeMeasure : ToolBase<Distance>
+    public class TapeMeasure : ToolBase<float>
     {
-        public TapeMeasure(String id, Coordinate start, Coordinate end)
+        public TapeMeasure(string id)
         {
-            ID = id;
-            SetArguments(start, end);
+            this.numberOfCoordinates = 2;
+            this.ID = LogAssistant.TOOL_ID + id;
         }
 
-        /// <inheritdoc/>
-        public override Distance Measure()
+        public override IMeasurement CreateMeasurement()
         {
-            return new Distance(ID + " Measurement:", args[0], args[1]);
+            Measure();
+            return new Distance(ID, coordinates[0], coordinates[1], this.Measurement);
         }
 
-        /// <inheritdoc/>
+        public override void Measure()
+        {
+            this.Measurement = (float) Formulary.CalculateDistance(coordinates[0], coordinates[1]);
+        }
+
         public override string ToString()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 2 variables needed! 
+        /// </summary>
+        /// <param name="args"></param>
+        public override void UpdateCoordinates(params Coordinate[] args)
+        {
+            SetCoordinates(args);
         }
     }
 }

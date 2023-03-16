@@ -1,28 +1,31 @@
-﻿namespace MeasurementUtility
+﻿using System;
+
+namespace MeasurementUtility
 {
     /// <summary>
-    /// This class defines the base of every tool.
+    /// 
     /// </summary>
-    /// <typeparam name="MeasurementBase">Datatype of the measurement. Primarily intended for types of MeasurementBase, but primitve data types
-    /// can also be used.</typeparam>
-    public abstract class ToolBase<MeasurementBase> : ClassSetupBase
+    /// <typeparam name="T"></typeparam>
+    public abstract class ToolBase<T> : CoordinateWrapper, ITool
     {
-        /// <summary>
-        /// Method used to create an instance of a MeasurementBase.
-        /// </summary>
-        /// <returns>Measurement created the corresponding tool</returns>
-        public abstract MeasurementBase Measure();
-
         /// <summary>
         /// 
         /// </summary>
-        /// <exception cref="System.NotImplementedException"></exception>
-        public void UpdatePoints()
+        private T measurement;
+        public T Measurement
         {
-            throw new System.NotImplementedException();
+            get => measurement;
+            protected set => measurement = value;
         }
+
+        public abstract IMeasurement CreateMeasurement();
+
+        /// <inheritdoc/>
+        public abstract void Measure();
 
         /// <inheritdoc/>
         public abstract override string ToString();
+
+        public abstract void UpdateCoordinates(params Coordinate[] args);
     }
 }

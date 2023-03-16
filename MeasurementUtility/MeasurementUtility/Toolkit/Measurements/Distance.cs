@@ -2,26 +2,24 @@
 
 namespace MeasurementUtility
 {
+    /// <summary>
+    /// restricted to two coordinates.
+    /// Gets initialized and acts then as a Container.
+    /// </summary>
     public class Distance : MeasurementBase<float>
     {
-        public Distance(String id, Coordinate start, Coordinate end)
+        public Distance(string id, Coordinate start, Coordinate end, float result)
         {
-            ID = id;
-            SetArguments(start, end);
+            this.numberOfCoordinates = 2;
+            this.ID = id + LogAssistant.MEASUREMENT_ID + LogAssistant.MEASUREMENT_ID_DISTANCE; // Timestamp?
+            SetCoordinates(start, end);
+            this.Result= result;
         }
 
         /// <inheritdoc/>
         public override string ToString()
         {
-            return ID + "The Distance between " + args[0] + " and " + args[1] + " is " + CalculateMeasurement();
-        }
-
-        /// <inheritdoc/>
-        public override float CalculateMeasurement()
-        {
-            return (float) Formulary.CalculateDistance(args[0], args[1]);
-        }
-
-        
+            return ID + coordinates[0] + " and " + coordinates[1] + " is " + Result;
+        }    
     }
 }

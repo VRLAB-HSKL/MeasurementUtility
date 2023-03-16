@@ -12,7 +12,7 @@ namespace MeasurementUtility
         public Marker(String id, Coordinate coordinate)
         {
             ID = id;
-            SetArguments(coordinate);
+            SetCoordinates(coordinate);
         }
 
         public override string ToString()

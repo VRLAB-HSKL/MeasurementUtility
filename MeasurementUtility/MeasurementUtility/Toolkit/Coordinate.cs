@@ -16,7 +16,7 @@ namespace MeasurementUtility
             this.y = y;
             this.z = z;
 
-            log.Debug("Coordinate: " + this);
+            //log.Debug("Coordinate: " + this);
             //log.Debug(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
             //log.Info("Info");
             //log.Warn("Warn");
