@@ -1,15 +1,16 @@
 ﻿namespace MeasurementUtility
 {
+    //TODO: For xml
     /// <summary>
     /// This class defines the base of every measurement. It's adds a wrapper for the result
     /// of the measurement to a class.
     /// </summary>
     /// <typeparam name="T">Datatype of the measurement</typeparam>
-    public abstract class MeasurementBase<T> : CoordinateWrapper, IMeasurement
+    public abstract class Measurement : CoordinateWrapper, IMeasurement
     {
-        private T result;
+        private ValueWrapper result;
 
-        public T Result 
+        public ValueWrapper Result 
         {
             get => result;
             protected set => result = value; 

@@ -1,9 +1,12 @@
 ﻿namespace MeasurementUtility
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public abstract class SerializableObject
     {
         /// <summary>
-        /// ID
+        /// ID of the object.
         /// </summary>
         private string id;
         public string ID

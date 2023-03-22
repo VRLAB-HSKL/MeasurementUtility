@@ -5,27 +5,27 @@ namespace MeasurementUtility
     /// <summary>
     /// 
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public abstract class ToolBase<T> : CoordinateWrapper, ITool
+    /// <typeparam name="MeasurementType"></typeparam>
+    public abstract class ToolBase<MeasurementType>: SerializableObject, ITool where MeasurementType : Measurement
     {
+        protected int CAPACITY { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
-        private T measurement;
-        public T Measurement
+        private MeasurementType measurement;
+        public MeasurementType Measurement
         {
             get => measurement;
             protected set => measurement = value;
         }
 
-        public abstract IMeasurement CreateMeasurement();
+        public abstract Measurement CreateMeasurement();
 
         /// <inheritdoc/>
-        public abstract void Measure();
+        public abstract void Measure(params Coordinate[] args);
 
         /// <inheritdoc/>
         public abstract override string ToString();
-
-        public abstract void UpdateCoordinates(params Coordinate[] args);
     }
 }

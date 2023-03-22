@@ -60,7 +60,7 @@
     <Compile Include="Toolkit\Coordinate.cs" />
     <Compile Include="Toolkit\Measurements\Distance.cs" />
     <Compile Include="Toolkit\Measurements\IMeasurement.cs" />
-    <Compile Include="Toolkit\Measurements\MeasurementBase.cs" />
+    <Compile Include="Toolkit\Measurements\Measurement.cs" />
     <Compile Include="Toolkit\Points\Marker.cs" />
     <Compile Include="Toolkit\Points\Point.cs" />
     <Compile Include="Toolkit\Points\PointBase.cs" />
@@ -70,6 +70,8 @@
     <Compile Include="Toolkit\Util\CoordinateWrapper.cs" />
     <Compile Include="Toolkit\Util\SerializableObject.cs" />
     <Compile Include="Toolkit\Util\ToolboxManager.cs" />
+    <Compile Include="Toolkit\Util\FloatWrapper.cs" />
+    <Compile Include="Toolkit\Util\ValueWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Doxyfile" />

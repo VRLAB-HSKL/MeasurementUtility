@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MeasurementUtility
 {
@@ -28,27 +27,40 @@ namespace MeasurementUtility
         public const int MAXCAPACITY = 6;
 
         // List of Tools
-        List<ITool> tools = new List<ITool>();
+        private List<ITool> tools = new List<ITool>();
 
-        public void AddTool(ITool tool)
+        public ToolboxManager()
+        {
+
+        }
+
+        private void AddTool(ITool tool)
         {
             if(tools.Count >= MAXCAPACITY)
             {
-                // warning
+                throw new System.ArgumentOutOfRangeException();
             }
             else
             {
                 tools.Add(tool);
             }
         }
-        // Setup Tools
-        public void SetupTools(string path)
-        {
 
+        // Setup Tools via xml file
+        public void SetupTools(ITool tool)
+        {
+            AddTool(tool);
+            AddTool(tool);
+            AddTool(tool);
         }
         public void SaveSnapshot()
         {
             //tools[selected]
+        }
+
+        public CoordinateWrapper CreateMeasurement()
+        {
+            return tools[selected].CreateMeasurement();
         }
     }
 }

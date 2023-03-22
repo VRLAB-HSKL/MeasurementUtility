@@ -9,9 +9,8 @@
             Coordinate c3 = new Coordinate(2f, 2f, 2f);
 
             TapeMeasure t = new TapeMeasure("1");
-            t.UpdateCoordinates(c1, c3);
-            
-
+            Coordinate[] c = new Coordinate[] { c1, c2 };
+            t.Measure(c);
             Console.WriteLine(t.CreateMeasurement());
         }
     }

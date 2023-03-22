@@ -6,7 +6,7 @@
     public abstract class CoordinateWrapper: SerializableObject
     {
         /// <summary>
-        /// 
+        /// Number of Coordinates the wrapper holds.
         /// </summary>
         public int numberOfCoordinates { get; protected set; }
 
