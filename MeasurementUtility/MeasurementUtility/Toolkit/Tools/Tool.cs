@@ -6,7 +6,7 @@ namespace MeasurementUtility
     /// 
     /// </summary>
     /// <typeparam name="MeasurementType"></typeparam>
-    public abstract class ToolBase<MeasurementType>: SerializableObject, ITool where MeasurementType : Measurement
+    public abstract class Tool<MeasurementType>: SerializableObject, ITool where MeasurementType : Measurement
     {
         protected int CAPACITY { get; set; }
 

@@ -5,7 +5,7 @@ namespace MeasurementUtility
     /// <summary>
     /// Class representing a tool, measuring distance.
     /// </summary>
-    public class TapeMeasure : ToolBase<Distance>
+    public class TapeMeasure : Tool<Distance>
     {
         public TapeMeasure(string id)
         {

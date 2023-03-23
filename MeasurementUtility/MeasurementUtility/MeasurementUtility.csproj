@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,12 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Global\Constants.cs" />
     <Compile Include="Global\Formulary.cs" />
     <Compile Include="Logging\LogAssistant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Toolkit\Coordinate.cs" />
+    <Compile Include="Toolkit\Util\Coordinate.cs" />
     <Compile Include="Toolkit\Measurements\Distance.cs" />
     <Compile Include="Toolkit\Measurements\IMeasurement.cs" />
     <Compile Include="Toolkit\Measurements\Measurement.cs" />
@@ -66,7 +66,7 @@
     <Compile Include="Toolkit\Points\PointBase.cs" />
     <Compile Include="Toolkit\Tools\ITool.cs" />
     <Compile Include="Toolkit\Tools\TapeMeasure.cs" />
-    <Compile Include="Toolkit\Tools\ToolBase.cs" />
+    <Compile Include="Toolkit\Tools\Tool.cs" />
     <Compile Include="Toolkit\Util\CoordinateWrapper.cs" />
     <Compile Include="Toolkit\Util\SerializableObject.cs" />
     <Compile Include="Toolkit\Util\ToolboxManager.cs" />

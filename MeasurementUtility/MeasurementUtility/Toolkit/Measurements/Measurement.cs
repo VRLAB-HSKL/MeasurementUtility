@@ -5,7 +5,6 @@
     /// This class defines the base of every measurement. It's adds a wrapper for the result
     /// of the measurement to a class.
     /// </summary>
-    /// <typeparam name="T">Datatype of the measurement</typeparam>
     public abstract class Measurement : CoordinateWrapper, IMeasurement
     {
         private ValueWrapper result;
