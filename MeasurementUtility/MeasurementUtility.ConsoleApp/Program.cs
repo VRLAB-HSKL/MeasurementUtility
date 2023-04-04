@@ -14,26 +14,35 @@ namespace MeasurementUtility.ConsoleApp
             Coordinate c2 = new Coordinate(1d, 1d, 1d);
             Coordinate c3 = new Coordinate(2f, 2f, 2f);
 
-            TapeMeasure t = new TapeMeasure("1");
+            //TapeMeasure t = new TapeMeasure("1");
             Coordinate[] c = new Coordinate[] { c1, c2 };
-            t.Measure(c);
-            Console.WriteLine(t.CreateMeasurement());
+            //t.Measure(c);
+            //Console.WriteLine(t.GetMeasurement());
 
-            ToolboxManager m = new ToolboxManager();
-            m.SetupTools(t);
+            //ToolboxManager m = new ToolboxManager();
+            //m.SetupTools(t);
 
-            string jsonString = JsonSerializer.Serialize(c1);
+            //string jsonString = JsonSerializer.Serialize(c1);
 
-            Console.WriteLine(jsonString);
+            //Console.WriteLine("String: " + jsonString);
 
-            Coordinate? c5 =
-                JsonSerializer.Deserialize<Coordinate>(jsonString);
+            //Coordinate? c5 =
+            //    JsonSerializer.Deserialize<Coordinate>(jsonString);
 
-            Console.WriteLine(c);
+            //Console.WriteLine(c5);
 
-            string js2 = JsonSerializer.Serialize(t);
-            Console.WriteLine(js2);
+            //string js2 = JsonSerializer.Serialize(t);
+            //Console.WriteLine(js2);
 
+            //Distance d = new Distance("d1", c1,c2, 1f);
+            //Console.WriteLine("Distance: " + JsonSerializer.Serialize(d));
+
+
+            ToolboxManager toolboxManager = new ToolboxManager();
+            toolboxManager.Selected = 7;
+            //TODO: Get Coords from Points
+            Measurement m = toolboxManager.GetMeasurement(c);
+            Console.WriteLine("Measurement: " + m);
         }
     }
 }

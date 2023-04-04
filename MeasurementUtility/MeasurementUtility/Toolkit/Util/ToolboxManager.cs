@@ -18,7 +18,7 @@ namespace MeasurementUtility
             } 
             set
             {
-                log.Info("Input value: " + value + "converted to: " + value % MAXCAPACITY);
+                log.Info("Input value: " + value + ", converted to valid value: " + value % MAXCAPACITY);
                 selected = value % MAXCAPACITY;
             } 
         }  
@@ -26,9 +26,10 @@ namespace MeasurementUtility
         // List of Tools
         private List<ITool> tools = new List<ITool>();
 
-        public ToolboxManager() // path parameter: xml
+        public ToolboxManager() // path parameter: xml, json
         {
-
+            AddTool(new TapeMeasure("t1"));
+            AddTool(new TapeMeasure("t2"));
         }
 
         private void AddTool(ITool tool)
@@ -53,8 +54,9 @@ namespace MeasurementUtility
             //tools[selected]
         }
 
-        public CoordinateWrapper CreateMeasurement()
+        public Measurement GetMeasurement(Coordinate[] coordinates)
         {
+            tools[selected].Measure(coordinates);
             return tools[selected].CreateMeasurement();
         }
     }
