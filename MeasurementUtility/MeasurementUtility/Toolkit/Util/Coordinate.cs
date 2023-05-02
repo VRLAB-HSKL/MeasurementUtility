@@ -1,10 +1,11 @@
 ﻿using log4net;
+using Newtonsoft.Json.Linq;
 using System;
 
 namespace MeasurementUtility
 {
     /// <summary>
-    /// Coordinate documentation test.
+    /// T documentation test.
     /// </summary>
     public struct Coordinate
     {
@@ -16,9 +17,9 @@ namespace MeasurementUtility
             this.y = y;
             this.z = z;
 
-            log.Debug("Coordinate " + this + "created.");
+            log.Debug("T " + this + "created.");
 
-            //log.Debug("Coordinate: " + this);
+            //log.Debug("T: " + this);
             //log.Debug(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
             //log.Info("Info");
             //log.Warn("Warn");
@@ -34,6 +35,12 @@ namespace MeasurementUtility
             //}
 
             //log.Fatal("Fatal");
+        }
+        public Coordinate(JObject obj)
+        {
+            this.x = (double) obj["Coordinate"]["x"];
+            this.y = (double) obj["Coordinate"]["y"];
+            this.z = (double) obj["Coordinate"]["z"];
         }
 
         public double x { get; set; }
@@ -65,8 +72,8 @@ namespace MeasurementUtility
         /// <summary>
         /// Compares only the Values of two Coordinates.
         /// </summary>
-        /// <param name="c1">Coordinate 1</param>
-        /// <param name="c2">Coordinate 2</param>
+        /// <param name="c1">T 1</param>
+        /// <param name="c2">T 2</param>
         /// <param name="epsilon"> Epsilon, fault tolerance</param>
         /// <returns></returns>
         public static bool EqualValue(Coordinate c1, Coordinate c2, double epsilon = Constants.Epsilon)
@@ -105,7 +112,19 @@ namespace MeasurementUtility
         public override string ToString()
         {
             log.Debug(LogAssistant.METHOD_ENTER + "ToString()");
-            return "{ " + x + ", " + y + ", " + z + " }";
+            return ToJson();
+        }
+
+        public string ToJson()
+        {
+            log.Debug(LogAssistant.METHOD_ENTER + "ToJson()");
+            return "{\"Coordinate\": {\"x\":" + x + ",\"y\":" + y + ",\"z\":" + z + "}}";
+        }
+
+        public JObject ToJObject()
+        {
+            log.Debug(LogAssistant.METHOD_ENTER + "ToJObject()");
+            return JObject.Parse(this.ToJson());
         }
     }
 }

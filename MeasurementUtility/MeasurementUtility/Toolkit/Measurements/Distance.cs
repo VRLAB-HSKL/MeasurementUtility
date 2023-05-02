@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 
 namespace MeasurementUtility
 {
@@ -10,15 +11,36 @@ namespace MeasurementUtility
         public Distance(string id, Coordinate start, Coordinate end, float result)
         {
             this.numberOfCoordinates = 2;
-            this.ID = id + LogAssistant.MEASUREMENT_ID + LogAssistant.MEASUREMENT_ID_DISTANCE; // Timestamp?
+            this.ID = id; 
             SetCoordinates(start, end);
             this.Result= new FloatWrapper(result);
+        }
+        public Distance(JObject obj)
+        {
+            this.numberOfCoordinates = 2;
+            this.ID = (string) obj["Distance"]["ID"];
+            SetCoordinates(new Coordinate((JObject) obj["Distance"]["Start"]),
+                new Coordinate((JObject) obj["Distance"]["End"]));
+            this.Result = new FloatWrapper((JObject) obj["Distance"]["Result"]);
+        }
+
+        public override JObject ToJObject()
+        {
+            return JObject.Parse(this.ToJson());
+        }
+
+        public override string ToJson()
+        {
+            return "{\"Distance\":" + "{\"ID\": " + ID + "," 
+                + "\"Start\":" + coordinates[0] + ","
+                + "\"End\":" + coordinates[1] + ","
+                + "\"Result\":" + Result.ToJson() +"}}";
         }
 
         /// <inheritdoc/>
         public override string ToString()
         {
-            return ID + coordinates[0] + " and " + coordinates[1] + " is " + Result;
+            return ToJson();
         }    
     }
 }

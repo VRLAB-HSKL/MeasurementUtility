@@ -1,4 +1,6 @@
-﻿namespace MeasurementUtility
+﻿using Newtonsoft.Json.Linq;
+
+namespace MeasurementUtility
 {
     /// <summary>
     /// 
@@ -14,5 +16,8 @@
             get => id;
             protected set => id = value;
         }
+
+        public abstract string ToJson();
+        public abstract JObject ToJObject();
     }
 }

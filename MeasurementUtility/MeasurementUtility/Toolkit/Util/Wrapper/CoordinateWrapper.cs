@@ -19,7 +19,7 @@
         /// Method used in order to set the arguments for the class. 
         /// Examples: <see cref="Distance"/>, <see cref="TapeMeasure"/>.
         /// </summary>
-        /// <param name="args">Any number of arguments of type Coordinate.</param>
+        /// <param name="args">Any number of arguments of type T.</param>
         protected void SetCoordinates(params Coordinate[] args)
         {
             if(args.Length != numberOfCoordinates) 

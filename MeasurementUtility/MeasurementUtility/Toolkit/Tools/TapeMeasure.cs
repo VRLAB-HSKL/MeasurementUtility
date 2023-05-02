@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 
 namespace MeasurementUtility
 {
@@ -32,6 +33,16 @@ namespace MeasurementUtility
             {
                 this.Measurement = new Distance(ID, coordinates[0], coordinates[1], (float)Formulary.CalculateDistance(coordinates[0], coordinates[1]));
             }          
+        }
+
+        public override JObject ToJObject()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToJson()
+        {
+            throw new NotImplementedException();
         }
 
         public override string ToString()

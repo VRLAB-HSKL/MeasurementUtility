@@ -2,6 +2,8 @@
 using System.IO;
 using System.Xml.Serialization;
 using System.Text.Json;
+using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 namespace MeasurementUtility.ConsoleApp
 {
@@ -14,8 +16,23 @@ namespace MeasurementUtility.ConsoleApp
             Coordinate c2 = new Coordinate(1d, 1d, 1d);
             Coordinate c3 = new Coordinate(2f, 2f, 2f);
 
+            Console.WriteLine(c1.ToJson());
+            Console.WriteLine(c1.ToJObject());
+
+            Coordinate c4 = new Coordinate(c1.ToJObject());
+            Console.WriteLine(c4.ToJson());
+            Console.WriteLine(c4.ToJObject());
+
+            Distance d = new Distance("1", c1, c2, 1f);
+            Console.WriteLine(d.ToJson());
+            Console.WriteLine(d.ToJObject());
+
+            Distance d2 = new Distance(d.ToJObject());
+            Console.WriteLine(d2.ToJson());
+            Console.WriteLine(d2.ToJObject());
+
             //TapeMeasure t = new TapeMeasure("1");
-            Coordinate[] c = new Coordinate[] { c1, c2 };
+            //Coordinate[] c = new Coordinate[] { c1, c2 };
             //t.Measure(c);
             //Console.WriteLine(t.GetMeasurement());
 
@@ -37,12 +54,10 @@ namespace MeasurementUtility.ConsoleApp
             //Distance d = new Distance("d1", c1,c2, 1f);
             //Console.WriteLine("Distance: " + JsonSerializer.Serialize(d));
 
-
-            ToolboxManager toolboxManager = new ToolboxManager();
-            toolboxManager.Selected = 7;
-            //TODO: Get Coords from Points
-            Measurement m = toolboxManager.GetMeasurement(c);
-            Console.WriteLine("Measurement: " + m);
+            //Console.WriteLine(c1.ToJson());
+            //Coordinate cx = JsonSerializer.Deserialize<Coordinate>(c1.ToJson());
+            //Console.WriteLine(cx.ToJson());
         }
+        
     }
 }

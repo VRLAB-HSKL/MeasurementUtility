@@ -11,11 +11,11 @@ namespace MeasurementUtility
         }
 
         /// <summary>
-        /// Method for updating the wrapped Coordinate.
+        /// Method for updating the wrapped T.
         /// </summary>
         /// <param name="coordinate">
         /// The coordinate. 
-        /// Intended to get the Coordinate values from the Transform of an Unity GameObject.
+        /// Intended to get the T values from the Transform of an Unity GameObject.
         /// </param>
         public void UpdateCoordinate(Coordinate coordinate)
         {
