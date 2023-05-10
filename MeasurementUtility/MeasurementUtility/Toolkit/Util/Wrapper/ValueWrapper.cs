@@ -1,4 +1,6 @@
-﻿namespace MeasurementUtility
+﻿using Newtonsoft.Json.Linq;
+
+namespace MeasurementUtility
 {
     /// <summary>
     /// Wrapper for a single data type. 
@@ -6,7 +8,19 @@
     /// </summary>
     public abstract class ValueWrapper
     {
+        
         public override abstract string ToString();
+
+        /// <summary>
+        /// Creates a JSON string with the data necessary for the corresponding object.
+        /// </summary>
+        /// <returns>The resulting string vlaue</returns>
         public abstract string ToJson();
+
+        /// <summary>
+        /// Transforms the JSON string to an JObject.
+        /// </summary>
+        /// <returns>JObject</returns>
+        public abstract JObject ToJObject();
     }
 }

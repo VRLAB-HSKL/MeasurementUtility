@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace MeasurementUtility
 {
+    //TODO: depricated?
     public class ToolboxManager
     {
         private static readonly ILog log = LogAssistant.GetLogger();

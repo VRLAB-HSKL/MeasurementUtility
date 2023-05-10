@@ -17,11 +17,19 @@ namespace MeasurementUtility
 
         public float Value { get; set; }
 
+        /// <inheritdoc/>
+        public override JObject ToJObject()
+        {
+            return JObject.Parse(this.ToJson());
+        }
+
+        /// <inheritdoc/>
         public override string ToJson()
         {
             return "{\"Value\":" + Value + "}";
         }
 
+        /// <inheritdoc/>
         public override string ToString()
         {
             return "{ float: " + Value + " }";

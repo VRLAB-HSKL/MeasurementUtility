@@ -4,6 +4,9 @@ using log4net;
 
 namespace MeasurementUtility
 {
+    /// <summary>
+    /// Manages predefined values in order to unify Logs.
+    /// </summary>
     public class LogAssistant
     {
         public readonly static string TOOL_ID = "Tool: ";

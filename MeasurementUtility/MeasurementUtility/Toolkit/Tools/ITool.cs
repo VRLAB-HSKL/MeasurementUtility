@@ -1,5 +1,6 @@
 ﻿namespace MeasurementUtility
 {
+    //TODO: depricated? update Tool? Used for Tool List with different Measurement types?
     public interface ITool
     {
         /// <summary>

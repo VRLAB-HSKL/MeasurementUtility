@@ -2,6 +2,9 @@
 
 namespace MeasurementUtility
 {
+    /// <summary>
+    /// Manages the predefined Formulary for the entire dll.
+    /// </summary>
     public class Formulary
     {
 
