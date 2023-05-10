@@ -85,23 +85,48 @@ namespace MeasurementUtility
                 && Math.Abs(c1.z - c2.z) <= epsilon);
         }
 
+        /// <summary>
+        /// Compares two Coordinates for equality using the Equals function.
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <param name="c2"></param>
+        /// <returns></returns>
         public static bool operator ==(Coordinate c1, Coordinate c2)
         {
             log.Debug(LogAssistant.OPERATOR_USE + "==");
             return c1.Equals(c2);
         }
+
+        /// <summary>
+        /// Compares two Coordinates for inequality using the Equals function.
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <param name="c2"></param>
+        /// <returns></returns>
         public static bool operator !=(Coordinate c1, Coordinate c2)
         {
             log.Debug(LogAssistant.OPERATOR_USE + "!=");
             return !c1.Equals(c2);
         }
 
+        /// <summary>
+        /// Creates a new Coordinate Object by adding the corresponding values of two Coordinates.
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <param name="c2"></param>
+        /// <returns>Coordinate</returns>
         public static Coordinate operator +(Coordinate c1, Coordinate c2)
         {
             log.Debug(LogAssistant.OPERATOR_USE + "+");
             return new Coordinate(checked(c1.x + c2.x), checked(c1.y + c2.y), checked(c1.z + c2.z));
         }
 
+        /// <summary>
+        /// Creates a new Coordinate Object by subtracting the corresponding values of two Coordinates.
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <param name="c2"></param>
+        /// <returns>Coordinate</returns>
         public static Coordinate operator -(Coordinate c1, Coordinate c2)
         {
             log.Debug(LogAssistant.OPERATOR_USE + "-");
@@ -115,12 +140,20 @@ namespace MeasurementUtility
             return ToJson();
         }
 
+        /// <summary>
+        /// Creates a JSON string with the data necessary for the corresponding object.
+        /// </summary>
+        /// <returns>The resulting string vlaue</returns>
         public string ToJson()
         {
             log.Debug(LogAssistant.METHOD_ENTER + "ToJson()");
             return "{\"Coordinate\": {\"x\":" + x + ",\"y\":" + y + ",\"z\":" + z + "}}";
         }
 
+        /// <summary>
+        /// Transforms the JSON string to an JObject.
+        /// </summary>
+        /// <returns>JObject</returns>
         public JObject ToJObject()
         {
             log.Debug(LogAssistant.METHOD_ENTER + "ToJObject()");

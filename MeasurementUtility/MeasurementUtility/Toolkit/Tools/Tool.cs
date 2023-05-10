@@ -11,7 +11,7 @@ namespace MeasurementUtility
         protected int CAPACITY { get; set; }
 
         /// <summary>
-        /// 
+        /// The type of Measurement created by this tool.
         /// </summary>
         private MeasurementType measurement;
         public MeasurementType Measurement
@@ -20,6 +20,7 @@ namespace MeasurementUtility
             protected set => measurement = value;
         }
 
+        /// <inheritdoc/>
         public abstract Measurement CreateMeasurement();
 
         /// <inheritdoc/>

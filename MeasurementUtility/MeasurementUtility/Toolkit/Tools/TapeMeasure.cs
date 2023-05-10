@@ -14,15 +14,13 @@ namespace MeasurementUtility
             this.ID = LogAssistant.TOOL_ID + id;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public override Measurement CreateMeasurement()
         {
             return this.Measurement;
         }
 
+        /// <inheritdoc/>
         public override void Measure(Coordinate[] coordinates)
         {
             if (coordinates.Length != CAPACITY)
@@ -35,11 +33,13 @@ namespace MeasurementUtility
             }          
         }
 
+        /// <inheritdoc/>
         public override JObject ToJObject()
         {
             throw new NotImplementedException();
         }
 
+        /// <inheritdoc/>
         public override string ToJson()
         {
             throw new NotImplementedException();
