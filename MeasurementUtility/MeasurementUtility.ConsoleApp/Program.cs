@@ -31,6 +31,13 @@ namespace MeasurementUtility.ConsoleApp
             Console.WriteLine(d2.ToJson());
             Console.WriteLine(d2.ToJObject());
 
+            EmptyMeasurement e = new EmptyMeasurement();
+            Console.WriteLine(e.ToJson());
+            Console.WriteLine(e.ToJObject());
+            EmptyMeasurement e1 = new EmptyMeasurement(e.ToJObject());
+            Console.WriteLine(e1.ToJson());
+
+
             //TapeMeasure t = new TapeMeasure("1");
             //Coordinate[] c = new Coordinate[] { c1, c2 };
             //t.Measure(c);
