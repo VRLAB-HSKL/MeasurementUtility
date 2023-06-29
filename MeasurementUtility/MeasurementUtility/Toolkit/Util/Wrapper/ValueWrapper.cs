@@ -8,7 +8,13 @@ namespace MeasurementUtility
     /// </summary>
     public abstract class ValueWrapper
     {
-        
+        public object Value { get; set; }
+
+        //public void SetValue<T>(T a)
+        //{
+        //    Value = a;
+        //}
+
         public override abstract string ToString();
 
         /// <summary>

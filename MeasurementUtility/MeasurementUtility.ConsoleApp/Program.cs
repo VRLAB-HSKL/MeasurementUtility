@@ -37,7 +37,8 @@ namespace MeasurementUtility.ConsoleApp
             EmptyMeasurement e1 = new EmptyMeasurement(e.ToJObject());
             Console.WriteLine(e1.ToJson());
 
-
+            Measurement m;
+            Console.WriteLine(TestFunc(out m, d));
             //TapeMeasure t = new TapeMeasure("1");
             //Coordinate[] c = new Coordinate[] { c1, c2 };
             //t.Measure(c);
@@ -66,5 +67,10 @@ namespace MeasurementUtility.ConsoleApp
             //Console.WriteLine(cx.ToJson());
         }
         
+        static bool TestFunc(out Measurement m, Distance d)
+        {
+            m = d;
+            return true;
+        }
     }
 }

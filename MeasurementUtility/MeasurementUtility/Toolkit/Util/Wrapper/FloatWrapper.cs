@@ -15,8 +15,6 @@ namespace MeasurementUtility
             Value = (float) obj["Value"];
         }
 
-        public float Value { get; set; }
-
         /// <inheritdoc/>
         public override JObject ToJObject()
         {
