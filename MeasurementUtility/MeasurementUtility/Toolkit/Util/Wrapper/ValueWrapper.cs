@@ -8,6 +8,7 @@ namespace MeasurementUtility
     /// </summary>
     public abstract class ValueWrapper
     {
+        //TODO: explaination -> why object?
         public object Value { get; set; }
 
         //public void SetValue<T>(T a)
