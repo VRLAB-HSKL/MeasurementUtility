@@ -31,5 +31,14 @@
                 this.coordinates = args;
             }   
         }
+
+        /// <summary>
+        /// Method used in order to get the arguments for the class. 
+        /// </summary>
+        /// <returns>An array of contained Coordinates.</returns>
+        public Coordinate[] GetCoordinates()
+        {
+            return coordinates;
+        }
     }
 }
