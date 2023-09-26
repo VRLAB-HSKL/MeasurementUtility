@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Runtime.Remoting.Messaging;
 
 namespace MeasurementUtility
 {
@@ -22,11 +23,30 @@ namespace MeasurementUtility
         /// <param name="obj">JObject</param>
         public Distance(JObject obj)
         {
+            FromJObject(obj);
+        }
+
+        public Distance(string json)
+        {
+            try
+            {
+                JObject obj = JObject.Parse(json);
+                FromJObject(obj);
+            }
+            catch(Exception e)
+            {
+                if (e.GetType().IsSubclassOf(typeof(Exception)))
+                    throw;
+            }  
+        }
+
+        protected void FromJObject(JObject obj)
+        {
             this.numberOfCoordinates = 2;
-            this.ID = (string) obj["Distance"]["ID"];
-            SetCoordinates(new Coordinate((JObject) obj["Distance"]["Start"]),
-                new Coordinate((JObject) obj["Distance"]["End"]));
-            this.Result = new FloatWrapper((JObject) obj["Distance"]["Result"]);
+            this.ID = (string)obj["Distance"]["ID"];
+            SetCoordinates(new Coordinate((JObject)obj["Distance"]["Start"]),
+                new Coordinate((JObject)obj["Distance"]["End"]));
+            this.Result = new FloatWrapper((JObject)obj["Distance"]["Result"]);
         }
 
         /// <inheritdoc/>
