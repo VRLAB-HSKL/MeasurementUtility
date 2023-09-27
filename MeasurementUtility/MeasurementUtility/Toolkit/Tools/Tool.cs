@@ -24,7 +24,7 @@ namespace MeasurementUtility
         public abstract Measurement CreateMeasurement();
 
         /// <inheritdoc/>
-        public abstract void Measure(params Coordinate[] args);
+        public abstract void Measure(string id, params Coordinate[] args);
 
         /// <inheritdoc/>
         public abstract override string ToString();

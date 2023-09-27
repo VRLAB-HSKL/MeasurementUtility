@@ -17,7 +17,7 @@
 
         /// <summary>
         /// Method used in order to set the arguments for the class. 
-        /// Examples: <see cref="Distance"/>, <see cref="TapeMeasure"/>.
+        /// Examples: <see cref="Distance"/>, <see cref="TwoPointDistanceMeasure"/>.
         /// </summary>
         /// <param name="args">Any number of arguments of type T.</param>
         protected void SetCoordinates(params Coordinate[] args)

@@ -6,9 +6,9 @@ namespace MeasurementUtility
     /// <summary>
     /// Class representing a tool, measuring distance.
     /// </summary>
-    public class TapeMeasure : Tool<Distance>
+    public class TwoPointDistanceMeasure : Tool<Distance>
     {
-        public TapeMeasure(string id)
+        public TwoPointDistanceMeasure(string id)
         {
             CAPACITY = 2;
             this.ID = LogAssistant.TOOL_ID + id;
@@ -21,15 +21,15 @@ namespace MeasurementUtility
         }
 
         /// <inheritdoc/>
-        public override void Measure(Coordinate[] coordinates)
+        public override void Measure(string measurementId, Coordinate[] coordinates)
         {
             if (coordinates.Length != CAPACITY)
             {
-                throw new System.ArgumentOutOfRangeException(nameof(coordinates));
+                throw new ArgumentOutOfRangeException(nameof(coordinates));
             }
             else
             {
-                this.Measurement = new Distance(ID, coordinates[0], coordinates[1], (float)Formulary.CalculateDistance(coordinates[0], coordinates[1]));
+                this.Measurement = new Distance(measurementId, coordinates[0], coordinates[1], (float)Formulary.CalculateDistance(coordinates[0], coordinates[1]));
             }          
         }
 

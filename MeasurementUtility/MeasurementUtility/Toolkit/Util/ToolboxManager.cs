@@ -29,8 +29,8 @@ namespace MeasurementUtility
 
         public ToolboxManager() // path parameter: xml, json
         {
-            AddTool(new TapeMeasure("t1"));
-            AddTool(new TapeMeasure("t2"));
+            AddTool(new TwoPointDistanceMeasure("t1"));
+            AddTool(new TwoPointDistanceMeasure("t2"));
         }
 
         private void AddTool(ITool tool)
@@ -57,7 +57,7 @@ namespace MeasurementUtility
 
         public Measurement GetMeasurement(Coordinate[] coordinates)
         {
-            tools[selected].Measure(coordinates);
+            tools[selected].Measure("test", coordinates);
             return tools[selected].CreateMeasurement();
         }
     }

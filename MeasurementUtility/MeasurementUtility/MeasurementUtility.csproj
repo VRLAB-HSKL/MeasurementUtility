@@ -83,7 +83,7 @@
     <Compile Include="Toolkit\Points\Point.cs" />
     <Compile Include="Toolkit\Points\PointBase.cs" />
     <Compile Include="Toolkit\Tools\ITool.cs" />
-    <Compile Include="Toolkit\Tools\TapeMeasure.cs" />
+    <Compile Include="Toolkit\Tools\TwoPointDistanceMeasure.cs" />
     <Compile Include="Toolkit\Tools\Tool.cs" />
     <Compile Include="Toolkit\Util\Wrapper\CoordinateWrapper.cs" />
     <Compile Include="Toolkit\Util\SerializableObject.cs" />

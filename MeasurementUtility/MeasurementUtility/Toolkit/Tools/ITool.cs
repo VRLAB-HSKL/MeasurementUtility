@@ -7,7 +7,7 @@
         /// Method used to set the Measurement result.
         /// </summary>
         /// <returns>Measurement created by the corresponding tool</returns>
-        void Measure(params Coordinate[] args);
+        void Measure(string id, params Coordinate[] args);
 
         /// <summary>
         /// Getter for the Measurement stored in a tool.
