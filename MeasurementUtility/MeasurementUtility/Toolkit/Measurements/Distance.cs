@@ -40,15 +40,6 @@ namespace MeasurementUtility
             }  
         }
 
-        protected void FromJObject(JObject obj)
-        {
-            this.numberOfCoordinates = 2;
-            this.ID = (string)obj["Distance"]["ID"];
-            SetCoordinates(new Coordinate((JObject)obj["Distance"]["Start"]),
-                new Coordinate((JObject)obj["Distance"]["End"]));
-            this.Result = new FloatWrapper((JObject)obj["Distance"]["Result"]);
-        }
-
         /// <inheritdoc/>
         public override JObject ToJObject()
         {
@@ -68,6 +59,20 @@ namespace MeasurementUtility
         public override string ToString()
         {
             return ToJson();
-        }    
+        }
+
+        public override void FromJObject(JObject obj)
+        {
+            this.numberOfCoordinates = 2;
+            this.ID = (string)obj["Distance"]["ID"];
+            SetCoordinates(new Coordinate((JObject)obj["Distance"]["Start"]),
+                new Coordinate((JObject)obj["Distance"]["End"]));
+            this.Result = new FloatWrapper((JObject)obj["Distance"]["Result"]);
+        }
+
+        public override void FromJson(string json)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

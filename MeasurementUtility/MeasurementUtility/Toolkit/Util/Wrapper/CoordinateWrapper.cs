@@ -3,7 +3,7 @@
     /// <summary>
     /// Wrapper for any number of <see cref="Coordinate"/>.
     /// </summary>
-    public abstract class CoordinateWrapper: SerializableObject
+    public abstract class CoordinateWrapper: JsonConverter
     {
         /// <summary>
         /// Number of Coordinates the wrapper holds.

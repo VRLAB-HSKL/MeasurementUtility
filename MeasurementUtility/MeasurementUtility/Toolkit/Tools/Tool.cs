@@ -6,9 +6,9 @@ namespace MeasurementUtility
     /// 
     /// </summary>
     /// <typeparam name="MeasurementType"></typeparam>
-    public abstract class Tool<MeasurementType>: SerializableObject, ITool where MeasurementType : Measurement
+    public abstract class Tool<MeasurementType>: JsonConverter, ITool where MeasurementType : Measurement
     {
-        protected int CAPACITY { get; set; }
+        protected int capacity { get; set; }
 
         /// <summary>
         /// The type of Measurement created by this tool.

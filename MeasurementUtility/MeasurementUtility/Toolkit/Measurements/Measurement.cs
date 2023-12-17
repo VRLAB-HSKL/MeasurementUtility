@@ -7,7 +7,6 @@ namespace MeasurementUtility
     /// This class defines the base of every measurement. It's adds a wrapper for the result
     /// of the measurement to a class.
     /// </summary>
-    [Serializable]
     public abstract class Measurement : CoordinateWrapper, IMeasurement
     {
         private ValueWrapper result;

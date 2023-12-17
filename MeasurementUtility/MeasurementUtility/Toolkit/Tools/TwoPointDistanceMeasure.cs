@@ -10,7 +10,7 @@ namespace MeasurementUtility
     {
         public TwoPointDistanceMeasure(string id)
         {
-            CAPACITY = 2;
+            capacity = 2;
             this.ID = LogAssistant.TOOL_ID + id;
         }
 
@@ -23,7 +23,7 @@ namespace MeasurementUtility
         /// <inheritdoc/>
         public override void Measure(string measurementId, Coordinate[] coordinates)
         {
-            if (coordinates.Length != CAPACITY)
+            if (coordinates.Length != capacity)
             {
                 throw new ArgumentOutOfRangeException(nameof(coordinates));
             }
@@ -45,9 +45,19 @@ namespace MeasurementUtility
             throw new NotImplementedException();
         }
 
+        public override void FromJObject(JObject jobj)
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             throw new System.NotImplementedException();
+        }
+
+        public override void FromJson(string json)
+        {
+            throw new NotImplementedException();
         }
     }
 }

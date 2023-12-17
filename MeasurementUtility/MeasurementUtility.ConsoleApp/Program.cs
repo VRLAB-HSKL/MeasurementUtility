@@ -34,7 +34,7 @@ namespace MeasurementUtility.ConsoleApp
             EmptyMeasurement e = new EmptyMeasurement();
             Console.WriteLine(e.ToJson());
             Console.WriteLine(e.ToJObject());
-            EmptyMeasurement e1 = new EmptyMeasurement(e.ToJObject());
+            EmptyMeasurement e1 = e;
             Console.WriteLine(e1.ToJson());
 
             Measurement m;

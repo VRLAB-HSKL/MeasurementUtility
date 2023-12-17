@@ -7,14 +7,9 @@ using System.Threading.Tasks;
 
 namespace MeasurementUtility
 {
-    public class EmptyMeasurement : Measurement
+    public class EmptyMeasurement : Measurement, IMeasurement
     {
         public EmptyMeasurement()
-        {
-            SetupEmpty();
-        }
-
-        public EmptyMeasurement(JObject obj)
         {
             SetupEmpty();
         }
@@ -40,6 +35,16 @@ namespace MeasurementUtility
         public override string ToString()
         {
             return ToJson();
+        }
+
+        public override void FromJson(string json)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void FromJObject(JObject jobj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

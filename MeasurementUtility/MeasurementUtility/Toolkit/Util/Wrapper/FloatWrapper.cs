@@ -15,6 +15,16 @@ namespace MeasurementUtility
             Value = (float) obj["Value"];
         }
 
+        public override void FromJObject(JObject obj)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void FromJson(string json)
+        {
+            throw new System.NotImplementedException();
+        }
+
         /// <inheritdoc/>
         public override JObject ToJObject()
         {

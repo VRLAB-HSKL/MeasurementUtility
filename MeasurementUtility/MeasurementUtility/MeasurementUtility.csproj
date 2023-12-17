@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -86,7 +87,7 @@
     <Compile Include="Toolkit\Tools\TwoPointDistanceMeasure.cs" />
     <Compile Include="Toolkit\Tools\Tool.cs" />
     <Compile Include="Toolkit\Util\Wrapper\CoordinateWrapper.cs" />
-    <Compile Include="Toolkit\Util\SerializableObject.cs" />
+    <Compile Include="Toolkit\Util\JsonConverter.cs" />
     <Compile Include="Toolkit\Util\ToolboxManager.cs" />
     <Compile Include="Toolkit\Util\Wrapper\FloatWrapper.cs" />
     <Compile Include="Toolkit\Util\Wrapper\ValueWrapper.cs" />

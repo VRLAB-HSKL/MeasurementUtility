@@ -7,7 +7,7 @@ namespace MeasurementUtility
     /// <summary>
     /// T documentation test.
     /// </summary>
-    public struct Coordinate
+    public class Coordinate : JsonConverter
     {
         private static readonly ILog log = LogAssistant.GetLogger();
 
@@ -17,7 +17,7 @@ namespace MeasurementUtility
             this.y = y;
             this.z = z;
 
-            log.Debug("T " + this + "created.");
+            log.Debug("Coordinate " + this + "created.");
 
             //log.Debug("T: " + this);
             //log.Debug(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
@@ -140,24 +140,38 @@ namespace MeasurementUtility
             return ToJson();
         }
 
-        /// <summary>
-        /// Creates a JSON string with the data necessary for the corresponding object.
-        /// </summary>
-        /// <returns>The resulting string vlaue</returns>
-        public string ToJson()
+        /// <inheritdoc/>
+        public override string ToJson()
         {
             log.Debug(LogAssistant.METHOD_ENTER + "ToJson()");
             return "{\"Coordinate\": {\"x\":" + x + ",\"y\":" + y + ",\"z\":" + z + "}}";
         }
 
-        /// <summary>
-        /// Transforms the JSON string to an JObject.
-        /// </summary>
-        /// <returns>JObject</returns>
-        public JObject ToJObject()
+        /// <inheritdoc/>
+        public override JObject ToJObject()
         {
             log.Debug(LogAssistant.METHOD_ENTER + "ToJObject()");
             return JObject.Parse(this.ToJson());
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="json"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        public override void FromJson(string json)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="jobj"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        public override void FromJObject(JObject jobj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

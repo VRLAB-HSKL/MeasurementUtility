@@ -7,6 +7,11 @@
     /// </summary>
     public interface IMeasurement
     {
+        //TODO: kann weg!
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         string ToString();
     }
 }

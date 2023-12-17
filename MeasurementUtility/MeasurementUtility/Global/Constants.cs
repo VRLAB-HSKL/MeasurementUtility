@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// Manages predefined constants for the entire dll.
+    /// This class is intended to exclusivly provide constants.
     /// </summary>
     public static class Constants
     {
