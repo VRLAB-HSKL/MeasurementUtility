@@ -12,6 +12,6 @@
         /// 
         /// </summary>
         /// <returns></returns>
-        string ToString();
+        //string ToString();
     }
 }

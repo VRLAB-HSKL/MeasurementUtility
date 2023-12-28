@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MeasurementUtility
 {
-    public class EmptyMeasurement : Measurement, IMeasurement
+    public class EmptyMeasurement : Measurement
     {
         public EmptyMeasurement()
         {
