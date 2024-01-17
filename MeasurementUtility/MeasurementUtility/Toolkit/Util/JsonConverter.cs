@@ -3,7 +3,8 @@
 namespace MeasurementUtility
 {
     /// <summary>
-    /// 
+    /// This class provides abstract methods that help 
+    /// convert information between JSON and class.
     /// </summary>
     public abstract class JsonConverter
     {
@@ -32,7 +33,8 @@ namespace MeasurementUtility
         public abstract JObject ToJObject();
 
         /// <summary>
-        /// 
+        /// This function is meant to be used in a constructer, in order to initialize a
+        /// measurement from a JSON-string.
         /// </summary>
         /// <param name="json"></param>
         public abstract void FromJson(string json);

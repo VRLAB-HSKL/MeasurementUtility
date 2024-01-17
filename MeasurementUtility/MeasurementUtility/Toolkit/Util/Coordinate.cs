@@ -5,7 +5,8 @@ using System;
 namespace MeasurementUtility
 {
     /// <summary>
-    /// T documentation test.
+    /// This class is the foundation of the measurements created with this dll.
+    /// As the name implies it handles the information of a coordinate.
     /// </summary>
     public class Coordinate : JsonConverter
     {

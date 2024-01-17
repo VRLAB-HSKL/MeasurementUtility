@@ -3,7 +3,7 @@
 namespace MeasurementUtility
 {
     /// <summary>
-    /// 
+    /// The abstracted form of a tool.
     /// </summary>
     /// <typeparam name="MeasurementType"></typeparam>
     public abstract class Tool<MeasurementType>: JsonConverter, ITool where MeasurementType : Measurement

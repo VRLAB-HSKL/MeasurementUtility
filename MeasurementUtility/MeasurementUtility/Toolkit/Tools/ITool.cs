@@ -1,6 +1,9 @@
 ﻿namespace MeasurementUtility
 {
-    //TODO: depricated? update Tool? Used for Tool List with different Measurement types?
+    /// <summary>
+    /// This class provides the method signatures for Tools. 
+    /// Intended for the usage in List<ITool>.
+    /// </summary>
     public interface ITool
     {
         /// <summary>

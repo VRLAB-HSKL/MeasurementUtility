@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 namespace MeasurementUtility
 {
-    //TODO: depricated?
+    /// <summary>
+    /// Not in use!
+    /// This class is indended to hold and use mutiple tools.
+    /// </summary>
     public class ToolboxManager
     {
         private static readonly ILog log = LogAssistant.GetLogger();
@@ -45,7 +48,7 @@ namespace MeasurementUtility
             }
         }
 
-        // Setup Tools via xml file
+        // Setup Tools via json file
         public void SetupTools(ITool tool)
         {
             AddTool(tool);

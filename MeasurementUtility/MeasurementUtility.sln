@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurementUtility", "Measu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementUtility.Tests", "MeasurementUtility.Tests\MeasurementUtility.Tests.csproj", "{245BEB28-6B61-45A0-836E-FEE15B075E15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurementUtility.ConsoleApp", "MeasurementUtility.ConsoleApp\MeasurementUtility.ConsoleApp.csproj", "{B836E7F0-64DA-41BD-A0F7-E1AE355A807E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementUtility.ConsoleApp", "MeasurementUtility.ConsoleApp\MeasurementUtility.ConsoleApp.csproj", "{B836E7F0-64DA-41BD-A0F7-E1AE355A807E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +15,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BE7F813-55F8-4D9C-84C7-4C3E9269A0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BE7F813-55F8-4D9C-84C7-4C3E9269A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE7F813-55F8-4D9C-84C7-4C3E9269A0B8}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE7F813-55F8-4D9C-84C7-4C3E9269A0B8}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{7BE7F813-55F8-4D9C-84C7-4C3E9269A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE7F813-55F8-4D9C-84C7-4C3E9269A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{245BEB28-6B61-45A0-836E-FEE15B075E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

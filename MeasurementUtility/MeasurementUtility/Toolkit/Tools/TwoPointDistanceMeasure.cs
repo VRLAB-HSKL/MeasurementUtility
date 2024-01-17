@@ -4,6 +4,7 @@ using System;
 namespace MeasurementUtility
 {
     /// <summary>
+    /// The specialized tool for Distance measureing.
     /// Class representing a tool, measuring distance.
     /// </summary>
     public class TwoPointDistanceMeasure : Tool<Distance>

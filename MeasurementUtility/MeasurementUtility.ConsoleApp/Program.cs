@@ -41,32 +41,7 @@ namespace MeasurementUtility.ConsoleApp
 
             Measurement m;
             Console.WriteLine(TestFunc(out m, d));
-            //TapeMeasure t = new TapeMeasure("1");
-            //Coordinate[] c = new Coordinate[] { c1, c2 };
-            //t.Measure(c);
-            //Console.WriteLine(t.GetMeasurement());
-
-            //ToolboxManager m = new ToolboxManager();
-            //m.SetupTools(t);
-
-            //string jsonString = JsonSerializer.Serialize(c1);
-
-            //Console.WriteLine("String: " + jsonString);
-
-            //Coordinate? c5 =
-            //    JsonSerializer.Deserialize<Coordinate>(jsonString);
-
-            //Console.WriteLine(c5);
-
-            //string js2 = JsonSerializer.Serialize(t);
-            //Console.WriteLine(js2);
-
-            //Distance d = new Distance("d1", c1,c2, 1f);
-            //Console.WriteLine("Distance: " + JsonSerializer.Serialize(d));
-
-            //Console.WriteLine(c1.ToJson());
-            //Coordinate cx = JsonSerializer.Deserialize<Coordinate>(c1.ToJson());
-            //Console.WriteLine(cx.ToJson());
+            
         }
         
         static bool TestFunc(out Measurement m, Distance d)

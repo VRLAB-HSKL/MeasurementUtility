@@ -75,14 +75,9 @@
     <Compile Include="Logging\LogAssistant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toolkit\Measurements\EmptyMeasurement.cs" />
-    <Compile Include="Toolkit\Points\IPoint.cs" />
     <Compile Include="Toolkit\Util\Coordinate.cs" />
     <Compile Include="Toolkit\Measurements\Distance.cs" />
-    <Compile Include="Toolkit\Measurements\IMeasurement.cs" />
     <Compile Include="Toolkit\Measurements\Measurement.cs" />
-    <Compile Include="Toolkit\Points\Marker.cs" />
-    <Compile Include="Toolkit\Points\Point.cs" />
-    <Compile Include="Toolkit\Points\PointBase.cs" />
     <Compile Include="Toolkit\Tools\ITool.cs" />
     <Compile Include="Toolkit\Tools\TwoPointDistanceMeasure.cs" />
     <Compile Include="Toolkit\Tools\Tool.cs" />

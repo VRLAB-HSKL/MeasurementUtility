@@ -26,6 +26,10 @@ namespace MeasurementUtility
             FromJObject(obj);
         }
 
+        /// <summary>
+        /// Distance constructor. Initializes a Distance object from a JSON-String.
+        /// </summary>
+        /// <param name="json">String</param>
         public Distance(string json)
         {
             try
@@ -60,7 +64,7 @@ namespace MeasurementUtility
         {
             return ToJson();
         }
-
+        /// <inheritdoc/>
         public override void FromJObject(JObject obj)
         {
             this.numberOfCoordinates = 2;
@@ -69,7 +73,7 @@ namespace MeasurementUtility
                 new Coordinate((JObject)obj["Distance"]["End"]));
             this.Result = new FloatWrapper((JObject)obj["Distance"]["Result"]);
         }
-
+        /// <inheritdoc/>
         public override void FromJson(string json)
         {
             throw new NotImplementedException();
