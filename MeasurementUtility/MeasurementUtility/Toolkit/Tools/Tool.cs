@@ -26,6 +26,7 @@ namespace MeasurementUtility
         /// <inheritdoc/>
         public abstract void Measure(string id, params Coordinate[] args);
 
+        //kann weg
         /// <inheritdoc/>
         public abstract override string ToString();
     }

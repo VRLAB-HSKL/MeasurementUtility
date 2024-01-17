@@ -17,13 +17,6 @@ namespace MeasurementUtility
             protected set => id = value;
         }
 
-        /// <summary>
-        /// This function is meant to be used in a constructer, in order to initialize a
-        /// measurement from a JObject.
-        /// </summary>
-        /// <param name="obj"></param>
-        //protected abstract void FromJObject(JObject obj);
-
         public override abstract string ToString();
 
         /// <summary>
@@ -45,9 +38,10 @@ namespace MeasurementUtility
         public abstract void FromJson(string json);
 
         /// <summary>
-        /// 
+        /// This function is meant to be used in a constructer, in order to initialize a
+        /// measurement from a JObject.
         /// </summary>
-        /// <param name="jobj"></param>
+        /// <param name="obj"></param>
         public abstract void FromJObject(JObject obj);
     }
 }

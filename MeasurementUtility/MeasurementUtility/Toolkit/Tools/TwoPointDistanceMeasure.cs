@@ -14,6 +14,7 @@ namespace MeasurementUtility
             this.ID = LogAssistant.TOOL_ID + id;
         }
 
+        // nochmal anschauen -> evtl in super class verschieben
         /// <inheritdoc/>
         public override Measurement CreateMeasurement()
         {

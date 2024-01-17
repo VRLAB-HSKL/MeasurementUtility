@@ -24,6 +24,8 @@ namespace MeasurementUtility.ConsoleApp
             Console.WriteLine(c4.ToJObject());
 
             Distance d = new Distance("1", c1, c2, 1f);
+            Distance dcopy = d;
+            Console.WriteLine(dcopy.ToJson());
             Console.WriteLine(d.ToJson());
             Console.WriteLine(d.ToJObject());
 

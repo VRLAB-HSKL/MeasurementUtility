@@ -14,6 +14,6 @@ namespace MeasurementUtility
         /// </summary>
         public object Value { get; set; }
 
-        public override abstract string ToString();
+        //public override abstract string ToString();
     }
 }
